@@ -11,9 +11,10 @@ def long_planeteer_calls(arr)
 end
 
 def find_the_cheese(arr)
-  return "cheddar" if arr.include?("cheddar") 
-  return "gouda" if arr.include?("gouda")
-  return "camembert" if arr.include?("camembert")
+  cheese_types = ["cheddar", "gouda", "camembert"]
+  arr.find { |c| return c if cheese_types.include?(c) }
 end
 
-#  cheese_types = ["cheddar", "gouda", "camembert"]
+ # return "cheddar" if arr.include?("cheddar") 
+ # return "gouda" if arr.include?("gouda")
+ # return "camembert" if arr.include?("camembert")
